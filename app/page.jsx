@@ -26,7 +26,7 @@ export default function HomePage() {
               {t("landing_cta")}
             </Link>
             <a
-              href="https://github.com/"
+              href="https://github.com/Ggaming5005/DataMapper/"
               target="_blank"
               rel="noreferrer"
               className="px-5 py-3 rounded-md border [border-color:rgb(var(--color-border))] hover:[background-color:rgb(255_255_255/0.05)] transition"
