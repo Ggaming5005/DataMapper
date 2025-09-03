@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0b0b0b;
+  --color-foreground: #ffffff;
+  --color-muted: #1a1a1a;
+  --color-card: #101010;
+  --color-border: #262626;
+  --color-accent: #8b5cf6;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Improve select dropdown visibility */
+select {
+  color: rgb(var(--color-foreground));
+  background-color: transparent;
+}
+select option {
+  color: #111;
+  background-color: #fff;
+}
+select:focus option:checked {
+  background-color: #e5e7eb;
+  color: #111;
+}
+
+/* Subtle animated grid background utility */
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid 24s linear infinite;
+}
+
+@keyframes grid {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100% 0, 0 100%;
+  }
+}
